@@ -5,120 +5,94 @@
 - [Entry form template](ENTRYFORM.md)
 - [Starter kit instructions](STARTERKIT_INSTRUCTIONS.md)
   
-### ⟹ [Insert your documentation here](ENTRYFORM.md) <<
 
-# hardcore
+# Hackathon Submission Entry form
 
-## About this Solution
-This solution is designed to help developers learn and get started quickly
-with Sitecore Containers, the Sitecore Next.js SDK, and Sitecore
-Content Serialization.
+You can find a very good reference to Github flavoured markdown reference in [this cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). If you want something a bit more WYSIWYG for editing then could use [StackEdit](https://stackedit.io/app) which provides a more user friendly interface for generating the Markdown code. Those of you who are [VS Code fans](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview) can edit/preview directly in that interface too.
 
-For simplicity, this solution does not implement Sitecore Helix conventions for
-solution architecture. As you begin building your Sitecore solution,
-you should review [Sitecore Helix](https://helix.sitecore.net/) and the
-[Sitecore Helix Examples](https://sitecore.github.io/Helix.Examples/) for guidance
-on implementing a modular solution architecture.
+## Team name
+⟹ Hardcore Sitecore
 
-## Configured for Sitecore-based workflow
-On first run, the JSS Styleguide sample will be imported via `jss deploy items`, then serialized via `sitecore ser pull`. It is intended that you work directly in Sitecore to define templates and renderings, instead of using the code-first approach. This is also known as "Sitecore-first" JSS workflow. To support this:
-
-* The JSS content workflow is disabled
-* Imported items will not be marked as 'protected'
-* JSS import warnings in the Content Editor and Experience Editor have been disabled
-
-The code-first Sitecore definitions and routes remain in the JSS project, in case you wish to use them for local development / mocking. You can remove these from `/data` and `/sitecore` if desired. You may also wish to remove the [initial import logic in the `up.ps1` script](./up.ps1#L44).
+## Category
+1.	Build an e-commerce Minimum Viable Product to sell community t-shirts 
+-	The submission must include the following technologies: 
+  -	Sitecore XM - Rendering host (.net or jss) 
+  -	Sitecore Send 
+  -	Sitecore Order Cloud 
+-	Authentication is not required 
+-	Payment processing is not required 
 
 
-## Support
-The template output as provided is supported by Sitecore. Once changed or amended,
-the solution becomes a custom implementation and is subject to limitations as
-defined in Sitecore's [scope of support](https://kb.sitecore.net/articles/463549#ScopeOfSupport).
+## Description
 
-## Prerequisites
-* NodeJs 14.x
-* .NET Core 3.1 SDK
-* .NET Framework 4.8 SDK
-* Visual Studio 2019
-* Docker for Windows, with Windows Containers enabled
+Our team created a site leverages the latest and greatest Sitecore experience management and eCommerce tools to rapidly create an MVP Sitecore eCommerce website. 
 
-See Sitecore Containers documentation for more information on system requirements.
+By leveraging the power of Sitecore XM and Sitecore Order Cloud we were able to rapidly build an eCommerce site that:
+- Combines the power of Sitecore XM Editor with the ease of Sitecore OrderCloud.
+- Allows authors to manage web content in Sitecore with Content Editor or Experience Editor.
+- Enables authors to manage test data through a copy of the Vercel Commerce marketplace hosted in the OrderCloud Portal. 
+- Uses DOTNET New to rapidly create a containerized JSS solution.
+- Employs a boilerplate Helix design to build easy to maintain code and content.
+- Uses Sitecore Content Serialization to manage content updates.
+- Uses Sitecore Headless JSS to render a basic eCommerce site with cached client-side content
+- Leverages the NextJS OrderCloud starter kit to rapidly create a site integrated with a marketplace hosted in OrderCloud IO.
+- Converts the product detail rendering from the starter kit to a Sitecore rendering, so we can leverage the Sitecore Experience Editor to edit the product detail page and enhance the product detail page with easy to implement custom Sitecore components. We place Sitecore components on the resulting product detail page, suorrounding the OrderCloud product detail markup to demonstrate how commerce and Sitecore content can be mixed in this solution.
+- Uses a custom NextJS app hosted in Vercel to pull dynamic content from Sitecore XM Layout Service into our headless pages.
+- Once we have a list of product IDs, our headless pages call out to Order Cloud to retrieve and render dynamic product data.
+- Integrates with Sitecore Send to manage email subscriptions for our eCommerce site, and allows users to place email subscriptions on a page as a Sitecore component.
 
-## What's Included
-* A `docker-compose` environment for a Sitecore XP0 topology
-  with a Next.js rendering host.
+  - Module Purpose
+  - This module proves that is possible to quickly assemble a working eCommerce site using the latest Sitecore tools.
+    - We integratate Sitecore XM with OrderCloud providing a functional MVP eCommerce site, and used the NextJS OrderCloud startup kit to accelerate implementation of our solution.
 
-  > The included `docker-compose.yml` is a stock XP0 environment from the Sitecore
-  > Container Support Package. All changes/additions for this solution are included
-  > in the `docker-compose.override.yml`.
+## Video link
+⟹ Provide a video highlighing your Hackathon module submission and provide a link to the video. You can use any video hosting, file share or even upload the video to this repository. _Just remember to update the link below_
 
-* Scripted invocation of `jss create` and `jss deploy` to initialize a
-  Next.js application.
-* Sitecore Content Serialization configuration.
-* An MSBuild project for deploying configuration and code into
-  the Sitecore Content Management role. (see `src\platform`).
+⟹ [Replace this Video link](#video-link)
 
-## Running this Solution
-1. If your local IIS is listening on port 443, you'll need to stop it.
-   > This requires an elevated PowerShell or command prompt.
-   ```
-   iisreset /stop
-   ```
+## Pre-requisites and Dependencies
 
-1. Before you can run the solution, you will need to prepare the following
-   for the Sitecore container environment:
-   * A valid/trusted wildcard certificate for `*.hardcore.localhost`
-   * Hosts file entries for `hardcore.localhost`
-   * Required environment variable values in `.env` for the Sitecore instance
-     * (Can be done once, then checked into source control.)
+⟹ Does your module rely on other Sitecore modules or frameworks?
 
-   See Sitecore Containers documentation for more information on these
-   preparation steps. The provided `init.ps1` will take care of them,
-   but **you should review its contents before running.**
+- Our module uses the Docker images in the Hackathon toolkit.
+- We use a shared OrderCloud marketplace hosted in OrderCloud.io.
 
-   > You must use an elevated/Administrator Windows PowerShell 5.1 prompt for
-   > this command, PowerShell 7 is not supported at this time.
 
-    ```ps1
-    .\init.ps1 -InitEnv -LicenseXmlPath "C:\path\to\license.xml" -AdminPassword "DesiredAdminPassword"
-    ```
+- Or other modules that must be installed
+- Or services that must be enabled/configured
 
-    If you check your `.env` into source control, other developers
-    can prepare a certificate and hosts file entries by simply running:
+_Remove this subsection if your entry does not have any prerequisites other than Sitecore_
 
-    ```ps1
-    .\init.ps1
-    ```
+## Installation instructions
 
-    > Out of the box, this example does not include `.env` in the `.gitignore`.
-    > Individual users may override values using process or system environment variables.
-    > This file does contain passwords that would provide access to the running containers
-    > in the developer's environment. If your Sitecore solution and/or its data are sensitive,
-    > you may want to exclude these from source control and provide another
-    > means of centrally configuring the information within.
+1. Pull down the main branch of the Hardcore Sitecore.
+2. Open Powershell as an administratora and run ./start-hackathon.ps1.
+3. Once all containers are up, sync the Sitecore configuration by running dotnet sitecore ser push
+4. Open the Hardcore.sln and rebuild the solution.
+5. Open Sitecore by accessing https://cm.hardcore.localhost/sitecore with credentials admin/b
+6. Publish the site.
+7. Visit the storefront at https://www.hardcore.localhost
 
-1. If this is your first time using `mkcert` with NodeJs, you will
-   need to set the `NODE_EXTRA_CA_CERTS` environment variable. This variable
-   must be set in your user or system environment variables. The `init.ps1`
-   script will provide instructions on how to do this.
-    * Be sure to restart your terminal or VS Code for the environment variable
-      to take effect.
+### Configuration
+No custom configuration is required. Our solution runs layered over the docker images included in the Hackathon solution.
 
-1. After completing this environment preparation, run the startup script
-   from the solution root:
-    ```ps1
-    .\up.ps1
-    ```
+## Usage instructions
+Our website extends the HeadStart Next JS base site and provides basic eCommerece functionality. Here are a few interesting points to note:
+- Our solution allows users to leverage Sitecore XM Experience Editor. For an example, you can launch /sitecore/content/hardcore/home in Experience Editor and edit the content on the page.
+- To view a product detail page, visit the storefront at https://www.hardcore.localhost/products/short-sleeve-t-shirt. Note that this page is produced by a Sitecore rendering that interleves Sitecore content with product contact pulled from order cloud. The page itself is servered statically from Vercel, and dynmaic information is pulled in from Sitecore Layout Service and Order Cloud. Note that since this is a Sitecore rendering, you can actually edit the product detil page in Experience Editor.
+- On the homepage at https://www.hardcore.localhost we have an email subcription interface that integrates with Sitecore Send.
 
-1. When prompted, log into Sitecore via your browser, and
-   accept the device authorization.
+Include screenshots where necessary. You can add images to the `./images` folder and then link to them from your documentation:
 
-1. Wait for the startup script to open browser tabs for the rendered site
-   and Sitecore Launchpad.
+![Hackathon Logo](docs/images/hackathon.png?raw=true "Hackathon Logo")
 
-## Using the Solution
-* A Visual Studio / MSBuild publish of the `Platform` project will update the running `cm` service.
-* The running `rendering` service uses `next dev` against the mounted Next.js application, and will recompile automatically for any changes you make.
-* You can also run the Next.js application directly using `npm` commands within `src\rendering`.
-* Debugging of the Next.js application is possible by using the `start:connected` or `start` scripts from the Next.js `package.json`, and the pre-configured *Attach to Process* VS Code launch configuration.
-* Review README's found in the projects and throughout the solution for additional information.
+You can embed images of different formats too:
+
+![Deal With It](docs/images/deal-with-it.gif?raw=true "Deal With It")
+
+And you can embed external images too:
+
+![Random](https://thiscatdoesnotexist.com/)
+
+## Comments
+If you'd like to make additional comments that is important for your module entry.
