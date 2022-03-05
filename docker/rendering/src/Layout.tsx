@@ -39,7 +39,7 @@ const Navigation = () => {
                     </a>
                 </Link>
             </h5>
-            <nav className="my-2 my-md-0 mr-md-3">
+            <nav className="my-2 my-md-0 mr-md-3 navlinks">
                 <Link href="/">
                     <a>Home</a>
                 </Link>
