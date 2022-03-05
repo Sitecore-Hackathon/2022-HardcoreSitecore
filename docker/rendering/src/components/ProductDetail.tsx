@@ -24,7 +24,7 @@ const ProductDetail = (props: ProductDetailProps): JSX.Element => (
 // ========================================
 
 const OcProduct: FunctionComponent = () => {
-  const { isReady, query, push } = useRouter()
+  const { isReady, asPath, query, push } = useRouter()
 
   const productName = useOcSelector(
     (s) => s.ocProductDetail.product && s.ocProductDetail.product.Name
@@ -34,7 +34,8 @@ const OcProduct: FunctionComponent = () => {
     push('/cart')
   }
 
-  const prodId = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
+  // Parse product ID from last segment of URL
+  const prodId = asPath.substring( asPath.lastIndexOf('/') + 1, asPath.indexOf('?')>0 ? asPath.indexOf('?') : asPath.length );
 
   return (
     <>

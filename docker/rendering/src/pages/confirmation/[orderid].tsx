@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { FunctionComponent } from 'react'
 import OcOrderConfirmation from '../../ordercloud/components/OcOrderConfirmation'
+import Navigation from '../../Navigation'
 
 const OrderConfirmationPage: FunctionComponent = () => {
   const { isReady, query } = useRouter()
@@ -11,7 +12,10 @@ const OrderConfirmationPage: FunctionComponent = () => {
       <Head>
         <title>Order Confirmed</title>
       </Head>
-      {isReady ? <OcOrderConfirmation orderId={query.orderid as string} /> : <h1>Loading</h1>}
+      <Navigation />
+      <div className="container">
+        {isReady ? <OcOrderConfirmation orderId={query.orderid as string} /> : <h1>Loading</h1>}
+      </div>
     </>
   )
 }

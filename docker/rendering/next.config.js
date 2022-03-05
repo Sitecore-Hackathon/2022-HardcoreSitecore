@@ -13,7 +13,8 @@ const nextConfig = {
   images: {
     domains: [
       'ocdevops.blob.core.windows.net',
-      'cm.hardcore.localhost'],
+      'cm.hardcore.localhost',
+      '0794-38-124-66-139.ngrok.io'],
   },
   
 
