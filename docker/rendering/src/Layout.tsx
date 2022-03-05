@@ -90,9 +90,36 @@ const Layout = ({ sitecoreContext: { route } }: LayoutProps): JSX.Element => {
       <div className="container">
         <Placeholder name="jss-main" rendering={route} />
       </div>
+
+      <form onSubmit={registerUser}>
+        <label htmlFor="name">Full Name</label>
+        <input id="name" name="name" type="text" autoComplete="name" required />
+        <label htmlFor="email">Email</label>
+        <input id="email" name="email" type="text" required />
+        <button type="submit">Register</button>
+      </form>
     </>
   );
 };
+
+const registerUser = async event => {
+  event.preventDefault();
+  const res = await fetch('https://api.moosend.com/v3/subscribers/04254003-bc95-48fd-8761-4511e2c7f01e/subscribe.json?apikey=ccdd5266-5ba3-454f-9ff7-ca76b6741b19', {
+    body: JSON.stringify({
+      name: event.target.name.value,
+      email: event.target.email.value,
+      HasExternalDoubleOptIn: false
+    }),
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    method: 'POST'
+  })
+  const result = await res.json()
+  console.log(result);
+}
+
 
 const propsAreEqual = (prevProps: LayoutProps, nextProps: LayoutProps) => {
   if (deepEqual(prevProps.sitecoreContext.route, nextProps.sitecoreContext.route)) return true;
