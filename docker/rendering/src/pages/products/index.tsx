@@ -5,6 +5,7 @@ import OcProductCard from '../../ordercloud/components/OcProductCard'
 import OcProductFacetForm from '../../ordercloud/components/OcProductFacetsForm'
 import OcProductList from '../../ordercloud/components/OcProductList'
 import useNextRouterMapping, { NextQueryMap } from '../../ordercloud/hooks/useNextRouterMapping'
+import Navigation from '../../Navigation'
 
 const queryMap: NextQueryMap = {
   search: 's',
@@ -30,7 +31,7 @@ const ProductListPage: FunctionComponent = () => {
 
   const handleRenderItem = (p: BuyerProduct) => {
     return (
-      <Link href={`/products/${p.ID}`}>
+      <Link href={`/product/${p.ID}`}>
         <a>
           <OcProductCard product={p} />
         </a>
@@ -39,14 +40,17 @@ const ProductListPage: FunctionComponent = () => {
   }
 
   return (
-    isReady && (
-      <>
-        <h2>Facets</h2>
-        <OcProductFacetForm onChange={handleFacetChange} />
+    <>
+    <Navigation/>
+    {isReady && (
+      <div className="container">
+        {/* <h2>Facets</h2>
+        <OcProductFacetForm onChange={handleFacetChange} /> */}
         <h2>Products</h2>
         <OcProductList options={options} renderItem={handleRenderItem} />
-      </>
-    )
+      </div>
+    )}
+    </>
   )
 }
 
