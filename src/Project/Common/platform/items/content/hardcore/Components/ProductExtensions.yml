@@ -1,32 +1,32 @@
 ﻿---
-ID: "12e4b455-5dc7-5896-acfe-2897cf85676d"
-Parent: "90dcd372-af7f-5fda-8e4a-645b02840318"
-Template: "5c547d4e-7111-4995-95b0-6b561751bf2e"
-Path: "/sitecore/layout/Placeholder Settings/Project/hardcore/jss-main"
+ID: "211bac6d-a32c-4313-ae86-31c1b92d8831"
+Parent: "afc46405-11e4-53b0-85c9-556fee383f02"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/hardcore/Components/ProductExtensions
 SharedFields:
-- ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
-  Hint: Placeholder Key
-  Value: "jss-main"
-- ID: "e391b526-d0c5-439d-803e-17512eae6222"
-  Hint: Allowed Controls
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/box_into.png
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
   Value: |
-    {BCF70BAD-D5E2-5430-BE5E-14CC622F8DDE}
-    {6F7F3927-AEED-4AC6-B501-B2C1B87BF98B}
-    {83FFC748-8387-5544-A947-3B28C7266DB5}
-    {65F8D3CF-3317-5762-A36B-F7402C5EFECE}
-    {6253E195-502F-564B-8255-82893E2AE443}
+    {A87A00B1-E6DB-45AB-8B54-636FEC3B5523}
+    {690ED09E-10B6-4746-939D-F1645E8B9ADC}
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 50
 Languages:
 - Language: en
   Fields:
   - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
     Hint: __Display name
-    Value: Main
+    Value: Product Extensions
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20220305T034153Z
+      Value: 20220305T034154Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -37,11 +37,11 @@ Languages:
         sitecore\JssImport
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "1755bef2-1c2f-4118-9688-4896cefce988"
+      Value: "7f120916-83d3-467d-9544-509bd3758d9f"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220305T181825Z
+      Value: 20220305T181552Z
