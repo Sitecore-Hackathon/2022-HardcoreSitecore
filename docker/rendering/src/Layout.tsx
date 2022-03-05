@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import deepEqual from 'deep-equal';
-import { useI18n } from 'next-localization';
+// import { useI18n } from 'next-localization';
 import {
   Placeholder,
   VisitorIdentification,
@@ -20,7 +20,7 @@ const publicUrl = getPublicUrl();
 // This is boilerplate navigation for sample purposes. Most apps should throw this away and use their own navigation implementation.
 // Most apps may also wish to use GraphQL for their navigation construction; this sample does not simply to support disconnected mode.
 const Navigation = () => {
-  const { t } = useI18n();
+  // const { t } = useI18n();
   
   const dispatch = useOcDispatch()
   const { user, isAnonymous, loading, lineItemCount } = useOcSelector((s) => ({
