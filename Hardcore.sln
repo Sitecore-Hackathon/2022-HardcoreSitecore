@@ -31,7 +31,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Docker", "_Docker", "{7A26
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{05A25F6B-D7D2-4115-AB43-8B9F7147ABA4}"
 	ProjectSection(SolutionItems) = preProject
-		src\Project\Common\Hardcore.Project.Common.module.json = src\Project\Common\Hardcore.Project.Common.module.json
 		src\Project\Common\README.md = src\Project\Common\README.md
 	EndProjectSection
 EndProject
