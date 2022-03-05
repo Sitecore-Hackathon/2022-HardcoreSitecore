@@ -29,9 +29,31 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Docker", "_Docker", "{7A26
 		docker\docker-compose.yml = docker\docker-compose.yml
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{05A25F6B-D7D2-4115-AB43-8B9F7147ABA4}"
+	ProjectSection(SolutionItems) = preProject
+		src\Project\Common\Hardcore.Project.Common.module.json = src\Project\Common\Hardcore.Project.Common.module.json
+		src\Project\Common\README.md = src\Project\Common\README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hardcore.Project.Common", "src\Project\Common\platform\Hardcore.Project.Common.csproj", "{394DFC09-0AD8-4995-AB56-8044D6691AAC}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{394DFC09-0AD8-4995-AB56-8044D6691AAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{394DFC09-0AD8-4995-AB56-8044D6691AAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{394DFC09-0AD8-4995-AB56-8044D6691AAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{394DFC09-0AD8-4995-AB56-8044D6691AAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{05A25F6B-D7D2-4115-AB43-8B9F7147ABA4} = {15D97D61-D597-42EC-B7E9-E9EC8130E630}
+		{394DFC09-0AD8-4995-AB56-8044D6691AAC} = {05A25F6B-D7D2-4115-AB43-8B9F7147ABA4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {311DA37D-528B-43B2-A99B-E7253F841D46}

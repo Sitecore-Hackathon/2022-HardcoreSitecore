@@ -1,0 +1,35 @@
+﻿---
+ID: "cec5d976-97dd-5f82-b208-eb5b9427814d"
+Parent: "b139dade-f583-5baa-9faa-3f7b8369d298"
+Template: "b32c734f-30a4-5515-9a35-c0829d403bbf"
+Path: "/sitecore/content/hardcore/home/graphql/sample-2/Page Components/sample-2-jss-main-ContentBlock-1"
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: "ContentBlock-1"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "10cb7849-5737-529f-bc3a-45fcdb469f7e"
+      Hint: content
+      Value: |
+        <p>A child route here to illustrate the power of GraphQL queries. <a href="/graphql">Back to GraphQL route</a></p>
+        
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220305T034159Z
+    - ID: "5be52ee5-1e89-5a59-a526-3a35bd8f84fa"
+      Hint: heading
+      Value: GraphQL Sample 2
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cc4287da-4fa6-4758-86ab-ba3f9e616d3f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\JssImport
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220305T034159Z

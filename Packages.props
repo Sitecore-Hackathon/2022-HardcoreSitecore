@@ -18,6 +18,7 @@
         <PackageReference Update="Sitecore.Assemblies.SitecoreHeadlessServicesServer" Version="$(SitecoreAspNetVersion)" />
         <PackageReference Update="Sitecore.Kernel" Version="$(PlatformVersion)" />
         <PackageReference Update="Sitecore.ContentSearch" Version="$(PlatformVersion)" />
+        <PackageReference Update="Sitecore.ContentSearch.Linq" Version="$(PlatformVersion)" />
         <PackageReference Update="Sitecore.LayoutService" Version="8.0.*" />
         <PackageReference Update="Sitecore.LayoutService.Mvc" Version="8.0.*" />
         <PackageReference Update="Sitecore.Services.GraphQL" Version="6.0.*" />
