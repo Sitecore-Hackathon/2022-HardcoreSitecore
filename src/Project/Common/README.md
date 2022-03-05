@@ -1,0 +1,1 @@
+# Hardcore.Project.Common
