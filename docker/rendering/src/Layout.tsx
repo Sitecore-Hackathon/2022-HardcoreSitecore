@@ -10,6 +10,8 @@ import {
   getPublicUrl,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 import { StyleguideSitecoreContextValue } from 'lib/component-props';
+import { useOcDispatch, useOcSelector } from './ordercloud/redux/ocStore'
+import logout from './ordercloud/redux/ocAuth/logout'
 
 // Prefix public assets with a public URL to enable compatibility with Sitecore Experience Editor.
 // If you're not supporting the Experience Editor, you can remove this.
@@ -19,6 +21,14 @@ const publicUrl = getPublicUrl();
 // Most apps may also wish to use GraphQL for their navigation construction; this sample does not simply to support disconnected mode.
 const Navigation = () => {
   const { t } = useI18n();
+  
+  const dispatch = useOcDispatch()
+  const { user, isAnonymous, loading, lineItemCount } = useOcSelector((s) => ({
+    user: s.ocUser.user,
+    loading: s.ocAuth.loading,
+    isAnonymous: s.ocAuth.isAnonymous,
+    lineItemCount: s.ocCurrentOrder.order ? s.ocCurrentOrder.order.LineItemCount : 0,
+  }))
 
   return (
     <div className="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom">
@@ -30,20 +40,25 @@ const Navigation = () => {
         </Link>
       </h5>
       <nav className="my-2 my-md-0 mr-md-3">
-        <a
-          className="p-2 text-dark"
-          href="https://jss.sitecore.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {t('Documentation')}
-        </a>
-        <Link href="/styleguide">
-          <a className="p-2 text-dark">{t('Styleguide')}</a>
-        </Link>
-        <Link href="/graphql">
-          <a className="p-2 text-dark">{t('GraphQL')}</a>
-        </Link>
+          <Link href="/">
+            <a>Home</a>
+          </Link>
+          <Link href="/cart">
+            <a>Cart</a>
+          </Link>
+          <Link href="/products">
+            <a>Products</a>
+          </Link>
+          {isAnonymous ? (
+            <Link href="/login">
+              <a>Login</a>
+            </Link>
+          ) : (
+            <button type="button" disabled={loading} onClick={() => dispatch(logout())}>
+              Logout
+            </button>
+          )}
+          {!isAnonymous && user && <p>{`${user.FirstName} ${user.LastName}`}</p>}
       </nav>
     </div>
   );

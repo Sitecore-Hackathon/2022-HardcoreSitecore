@@ -2,6 +2,8 @@ import type { AppProps } from 'next/app';
 import Router from 'next/router';
 import { I18nProvider } from 'next-localization';
 import NProgress from 'nprogress';
+import { ApiRole } from 'ordercloud-javascript-sdk'
+import OcProvider from '../ordercloud/redux/ocProvider'
 
 // Using bootstrap and nprogress are completely optional.
 //  bootstrap is used here to provide a clean layout for samples, without needing extra CSS in the sample app
@@ -10,6 +12,13 @@ import NProgress from 'nprogress';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'nprogress/nprogress.css';
 import 'assets/app.css';
+
+const clientId = process.env.NEXT_PUBLIC_OC_CLIENT_ID || ''
+const scope = process.env.NEXT_PUBLIC_OC_SCOPE
+  ? (process.env.NEXT_PUBLIC_OC_SCOPE.split(',') as ApiRole[])
+  : []
+const baseApiUrl = process.env.NEXT_PUBLIC_OC_BASE_API_URL
+const allowAnonymous = Boolean(process.env.NEXT_PUBLIC_OC_ALLOW_ANONYMOUS)
 
 NProgress.configure({ showSpinner: false, trickleSpeed: 100 });
 
@@ -21,12 +30,22 @@ function App({ Component, pageProps }: AppProps): JSX.Element {
   const { dictionary, ...rest } = pageProps;
 
   return (
-    // Use the next-localization (w/ rosetta) library to provide our translation dictionary to the app.
-    // Note Next.js does not (currently) provide anything for translation, only i18n routing.
-    // If your app is not multilingual, next-localization and references to it can be removed.
+    <OcProvider
+      config={{
+        clientId,
+        scope,
+        baseApiUrl,
+        allowAnonymous,
+        cookieOptions: {
+          prefix: 'hds-nextjs',
+          path: '/',
+        },
+      }}
+    >
     <I18nProvider lngDict={dictionary} locale={pageProps.locale}>
       <Component {...rest} />
     </I18nProvider>
+    </OcProvider>
   );
 }
 
