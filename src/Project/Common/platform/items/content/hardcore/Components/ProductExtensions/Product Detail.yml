@@ -1,0 +1,37 @@
+﻿---
+ID: "55038192-1e2b-42a4-9d9b-427d2c8ea0e5"
+Parent: "211bac6d-a32c-4313-ae86-31c1b92d8831"
+Template: "690ed09e-10b6-4746-939d-f1645e8b9adc"
+Path: /sitecore/content/hardcore/Components/ProductExtensions/Product Detail
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220305T181858Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f952479a-0aea-4e8d-9657-4a863cb26f04"
+    - ID: "96c000d7-2e6f-4b96-8b79-8589d3816aec"
+      Hint: heading
+      Value: Product Detail
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220305T181934Z
