@@ -15,8 +15,8 @@ Languages:
     - ID: "10cb7849-5737-529f-bc3a-45fcdb469f7e"
       Hint: content
       Value: |
-        <p>Welcome to the Sitecore Hackathon 2022 Clothing Shop</p>
-        <p><img alt="" src="-/media/35B2C0EB91A54C9FA87683C77EF611E4.ashx" style="height:856px; width:764px;" /></p>
+        <p><a href="https://www.hardcore.localhost/product/short-sleeve-t-shirt"><img alt="" src="-/media/35B2C0EB91A54C9FA87683C77EF611E4.ashx?h=856&amp;w=764" style="height:856px; width:764px;" /></a></p>
+        <h2>XM + OrderCloud + Sitecore Send + Vercel!</h2>
         <p>This site leverages the latest and greatest Sitecore experience management and eCommerce tools to rapidly create an MVP Sitecore eCommerce website.</p>
         <h3>Rapid Integration of Sitecore XM and Order Cloud</h3>
         <p>By leveraging the power of Sitecore XM and Sitecore Order Cloud we were able to rapidly build an eCommerce site that:</p>
@@ -33,20 +33,20 @@ Languages:
             <li>Integrates with Sitecore Send to manage email subscriptions for our eCommerce site.</li>
         </ul>
         <p>Enjoy our Sitecore Hackathon 2022 shop. See you next year...</p>
-        <p><img alt="" src="-/media/69E55240B9E14FBFBDF1A89F2FC534FB.ashx" style="height:921px; width:825px;" /></p>
+        <p><a href="https://www.hardcore.localhost/product/short-sleeve-t-shirt"><img alt="" src="-/media/69E55240B9E14FBFBDF1A89F2FC534FB.ashx?h=921&amp;w=825" style="height:921px; width:825px;" /></a></p>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20220305T034158Z
     - ID: "5be52ee5-1e89-5a59-a526-3a35bd8f84fa"
       Hint: heading
-      Value: Welcome to the Hackathon 2022 Clothing Store
+      Value: "Hackathon 2022 Clothing Store Now Open!"
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "edefe65f-d3d7-4b0e-951f-e2a8d0858e52"
+      Value: "942cbebe-087c-4aa1-9cfe-216631b35447"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220305T170755Z
+      Value: 20220305T212753Z
