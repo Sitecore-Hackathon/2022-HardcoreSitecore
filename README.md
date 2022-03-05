@@ -46,9 +46,9 @@ By leveraging the power of Sitecore XM and Sitecore Order Cloud we were able to 
     - We integratate Sitecore XM with OrderCloud providing a functional MVP eCommerce site, and used the NextJS OrderCloud startup kit to accelerate implementation of our solution.
 
 ## Video link
-⟹ Provide a video highlighing your Hackathon module submission and provide a link to the video. You can use any video hosting, file share or even upload the video to this repository. _Just remember to update the link below_
+⟹ Provide a video highlighing your Hackathon module submission and provide a link to the video. You can use any video hosting, file share or even upload the video to this repository.
 
-⟹ [Replace this Video link](#video-link)
+⟹ [YouTube Submission Video Overview](https://youtu.be/xHhChn_oddo)
 
 ## Pre-requisites and Dependencies
 
