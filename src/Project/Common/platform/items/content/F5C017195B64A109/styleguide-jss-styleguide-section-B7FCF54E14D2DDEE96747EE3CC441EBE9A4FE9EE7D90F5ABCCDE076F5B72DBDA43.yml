@@ -1,0 +1,49 @@
+﻿---
+ID: "b50392cb-a381-5a86-adfb-c3f7e25dfb6b"
+Parent: "02b274a3-27b8-5772-9889-4f1ff51316f1"
+Template: "a3c78272-65ae-5602-81c1-5cdac4b7e710"
+Path: "/sitecore/content/hardcore/home/styleguide/Page Components/styleguide-jss-styleguide-section-B7FCF54E14D2DDEE96747EE3CC441EBE9A4FE9EE7D90F5ABCCDE076F5B72DBDA43"
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: "Styleguide-FieldUsage-Link-9"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220305T034201Z
+    - ID: "2b3c7a43-f05f-567c-abe2-1c5632ec5fbb"
+      Hint: emailLink
+      Value: |
+        <link text="Send an Email" url="mailto:foo@bar.com" linktype="mailto" />
+    - ID: "46b53e98-5878-5132-acf5-681f85663f62"
+      Hint: internalLink
+      Value: |
+        <link linktype="internal" id="{28BBFBE4-25EA-5491-97B0-6DF44270FCB3}" />
+    - ID: "7e73f9bc-8d8f-5c29-a9b1-743f7d1e01bc"
+      Hint: heading
+      Value: General Link
+    - ID: "821393df-cc78-5d61-9cbf-c98fe7b37040"
+      Hint: externalLink
+      Value: |
+        <link text="Link to Sitecore" url="https://www.sitecore.com" linktype="external" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7139adc6-ae78-4690-bcb1-5e092fc2f9c5"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\JssImport
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220305T034201Z
+    - ID: "e6772101-7e08-5aea-9827-2efbe55d4ce0"
+      Hint: description
+      Value: <p>A <em>General Link</em> is a field that represents an <code>&lt;a&gt;</code> tag.</p>
+    - ID: "fde459f0-f9d8-53fd-861d-f37d4c452d54"
+      Hint: paramsLink
+      Value: |
+        <link target="_blank" text="Sitecore Dev Site" title="&lt;a&gt; title attribute" url="https://dev.sitecore.net" class="font-weight-bold" linktype="external" />

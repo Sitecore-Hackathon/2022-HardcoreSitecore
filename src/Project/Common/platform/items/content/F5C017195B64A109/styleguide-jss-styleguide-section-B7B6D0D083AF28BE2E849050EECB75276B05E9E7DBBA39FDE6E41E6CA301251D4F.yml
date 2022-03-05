@@ -1,0 +1,39 @@
+﻿---
+ID: "186df6ad-d042-590b-92ee-ffd74407ae0e"
+Parent: "02b274a3-27b8-5772-9889-4f1ff51316f1"
+Template: "072c1a5f-6717-570b-838d-4eae4913db65"
+Path: "/sitecore/content/hardcore/home/styleguide/Page Components/styleguide-jss-styleguide-section-B7B6D0D083AF28BE2E849050EECB75276B05E9E7DBBA39FDE6E41E6CA301251D4F"
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: "Styleguide-FieldUsage-File-5"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220305T034201Z
+    - ID: "628b5aa2-fc7f-5e7a-9ba9-2428afd34515"
+      Hint: file
+      Value: |
+        <file mediaid="{4204F327-CB8D-5717-B2E1-7109DEE8FC64}" />
+    - ID: "7e73f9bc-8d8f-5c29-a9b1-743f7d1e01bc"
+      Hint: heading
+      Value: File
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "50db09bf-4f43-433a-abeb-2ca997811d39"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\JssImport
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220305T034201Z
+    - ID: "e6772101-7e08-5aea-9827-2efbe55d4ce0"
+      Hint: description
+      Value: |
+        <small>Note: Sitecore does not support inline editing of File fields. The value must be edited in Experience Editor by using the edit rendering fields button (looks like a pencil) with the whole component selected.</small>
+        

@@ -1,0 +1,16 @@
+/data/cm/*
+!/data/cm/.gitkeep
+/data/cd/*
+!/data/cd/.gitkeep
+/data/sql/*
+!/data/sql/.gitkeep
+/data/mssql/*
+!/data/mssql/.gitkeep
+/data/solr/*
+!/data/solr/.gitkeep
+
+/deploy/platform/*
+!/deploy/platform/.gitkeep
+
+/deploy/xconnect/*
+!/deploy/xconnect/.gitkeep

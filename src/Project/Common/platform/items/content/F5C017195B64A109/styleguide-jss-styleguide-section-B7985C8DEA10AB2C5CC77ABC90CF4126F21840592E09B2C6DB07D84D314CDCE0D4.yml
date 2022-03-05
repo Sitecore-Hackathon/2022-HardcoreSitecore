@@ -1,0 +1,52 @@
+﻿---
+ID: "2f865da4-1f75-583b-8ccf-d174587118e0"
+Parent: "02b274a3-27b8-5772-9889-4f1ff51316f1"
+Template: "dcd2fb69-843f-5f34-b2fa-8aec165e6f30"
+Path: "/sitecore/content/hardcore/home/styleguide/Page Components/styleguide-jss-styleguide-section-B7985C8DEA10AB2C5CC77ABC90CF4126F21840592E09B2C6DB07D84D314CDCE0D4"
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: "Styleguide-FieldUsage-ContentList-11"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0bd9b1a3-40ec-50bf-8ba7-e8af74711753"
+      Hint: sharedContentList
+      Value: |
+        {7F5E8E91-C49C-585A-8558-A195E57ACEA1}
+        {E5DA1DAF-CAB5-5C43-93DA-8ECE4EA5A6CE}
+    - ID: "0bf1fe57-f970-5939-8a04-7a7c41358b83"
+      Hint: localContentList
+      Value: |
+        {249B0624-F265-59B8-B445-8AE51AF20674}
+        {83C32DE6-1570-5D48-BAC0-602498FE8FF3}
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220305T034202Z
+    - ID: "7e73f9bc-8d8f-5c29-a9b1-743f7d1e01bc"
+      Hint: heading
+      Value: Content List
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cad321a7-bde4-49a0-825b-699917571f77"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\JssImport
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220305T034202Z
+    - ID: "e6772101-7e08-5aea-9827-2efbe55d4ce0"
+      Hint: description
+      Value: |
+        <p>
+          <small>
+            Content Lists are a way to reference zero or more other content items.
+            Referenced items may be shared.
+            To reference a single content item, use an <em>Item Link</em> field.<br />
+            <strong>Note:</strong> Sitecore does not support inline editing of Content List fields. The value must be edited in Experience Editor by using the edit rendering fields button (looks like a pencil) with the whole component selected.
+          </small>
+        </p>
+        

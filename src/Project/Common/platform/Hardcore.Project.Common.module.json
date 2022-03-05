@@ -1,0 +1,42 @@
+{
+    "namespace": "Hardcore.Project.Common",
+    "items": {
+        "includes": [
+            {
+                "name": "content-root",
+                "path": "/sitecore/content",
+                "scope": "singleItem",
+                "allowedPushOperations": "createAndUpdate"
+            },
+            {
+                "name": "api-key",
+                "path": "/sitecore/system/Settings/Services/API Keys/hardcore",
+                "scope": "singleItem"
+            },            
+            {
+                "name": "layouts",
+                "path": "/sitecore/layout/Layouts/Project/hardcore"
+            },
+            {
+                "name": "placeholders",
+                "path": "/sitecore/layout/Placeholder Settings/Project/hardcore"
+            },
+            {
+                "name": "renderings",
+                "path": "/sitecore/layout/Renderings/Project/hardcore"
+            },
+            {
+                "name": "templates",
+                "path": "/sitecore/templates/Project/hardcore"
+            },
+            {
+                "name": "content",
+                "path": "/sitecore/content/hardcore"
+            },
+            {
+                "name": "media",
+                "path": "/sitecore/media library/hardcore"
+            }
+        ]
+    }
+}
