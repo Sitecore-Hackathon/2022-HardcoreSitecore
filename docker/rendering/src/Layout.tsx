@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 import deepEqual from 'deep-equal';
+import Navigation from './Navigation';
 // import { useI18n } from 'next-localization';
 import {
     Placeholder,
@@ -10,55 +10,12 @@ import {
     getPublicUrl,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 import { StyleguideSitecoreContextValue } from 'lib/component-props';
-import { useOcDispatch, useOcSelector } from './ordercloud/redux/ocStore'
-import logout from './ordercloud/redux/ocAuth/logout'
 // Prefix public assets with a public URL to enable compatibility with Sitecore Experience Editor.
 // If you're not supporting the Experience Editor, you can remove this.
 const publicUrl = getPublicUrl();
 // This is boilerplate navigation for sample purposes. Most apps should throw this away and use their own navigation implementation.
 // Most apps may also wish to use GraphQL for their navigation construction; this sample does not simply to support disconnected mode.
-const Navigation = () => {
-    // const { t } = useI18n();
-    const dispatch = useOcDispatch()
-    const { user, isAnonymous, loading, lineItemCount } = useOcSelector((s) => ({
-        user: s.ocUser.user,
-        loading: s.ocAuth.loading,
-        isAnonymous: s.ocAuth.isAnonymous,
-        lineItemCount: s.ocCurrentOrder.order ? s.ocCurrentOrder.order.LineItemCount : 0,
-    }))
-    return (
-        <div className="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom">
-            <h5 className="my-0 mr-md-auto font-weight-normal">
-                <Link href="/">
-                    <a className="text-dark">
-                        <img src={`${publicUrl}/sc_logo.svg`} alt="Sitecore" />
-                    </a>
-                </Link>
-            </h5>
-            <nav className="my-2 my-md-0 mr-md-3 navlinks">
-                <Link href="/">
-                    <a>Home</a>
-                </Link>
-                <Link href="/cart">
-                    <a>Cart</a>
-                </Link>
-                <Link href="/products">
-                    <a>Products</a>
-                </Link>
-                {isAnonymous ? (
-                    <Link href="/login">
-                        <a>Login</a>
-                    </Link>
-                ) : (
-                    <button type="button" disabled={loading} onClick={() => dispatch(logout())}>
-                        Logout
-                    </button>
-                )}
-                {!isAnonymous && user && <p>{`${user.FirstName} ${user.LastName}`}</p>}
-            </nav>
-        </div>
-    );
-};
+
 interface LayoutProps {
     sitecoreContext: StyleguideSitecoreContextValue;
 }
@@ -97,20 +54,21 @@ const Layout = ({ sitecoreContext: { route } }: LayoutProps): JSX.Element => {
             <Navigation />
             {/* root placeholder for the app, which we add components to using route data */}
             <div className="container">
-                <Placeholder name="jss-main" rendering={route} />
+              <Placeholder name="jss-main" rendering={route} />
+              {!subscribed && (
+                  <form id="SubscribeForm" onSubmit={registerUser}>
+                      <strong>Subscribe for product alerts!</strong>
+                      <label htmlFor="name">Full Name</label>
+                      <input id="name" name="name" type="text" placeholder='name' autoComplete="name" required />
+                      <label htmlFor="email">Email</label>
+                      <input id="email" name="email" type="text" placeholder='email' required />
+                      <button type="submit">Register</button>
+                  </form>
+              )}
+              {subscribed && (
+                  <p>Thank you for subscribing</p>
+              )}
             </div>
-            {!subscribed && (
-                <form id="SubscribeForm" onSubmit={registerUser}>
-                    <label htmlFor="name">Full Name</label>
-                    <input id="name" name="name" type="text" autoComplete="name" required />
-                    <label htmlFor="email">Email</label>
-                    <input id="email" name="email" type="text" required />
-                    <button type="submit">Register</button>
-                </form>
-            )}
-            {subscribed && (
-                <p>Thank you for subscribing</p>
-            )}
         </>
     );
 };
