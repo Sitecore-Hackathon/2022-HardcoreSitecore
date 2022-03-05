@@ -1,4 +1,5 @@
 import { Spec } from 'ordercloud-javascript-sdk'
+import Image from 'next/image'
 import { FormEvent, FunctionComponent, useCallback, useEffect, useState } from 'react'
 import useOcProductDetail from '../../hooks/useOcProductDetail'
 import { createLineItem, updateLineItem } from '../../redux/ocCurrentOrder'
@@ -103,6 +104,18 @@ const OcProductDetail: FunctionComponent<OcProductDetailProps> = ({
   return product ? (
     <div>
       <h2>{product.Name}</h2>
+      {product.xp.Images.map((image, i) => (
+                  <div key={image.url}>
+                    <Image
+                      src={image.url!}
+                      alt={image.alt || 'Product Image'}
+                      width={600}
+                      height={600}
+                      priority={i === 0}
+                      quality="85"
+                    />
+                  </div>
+                ))}
       <b>{formatPrice(product.PriceSchedule.PriceBreaks[0].Price)}</b>
       {/* eslint-disable-next-line */}
       <p dangerouslySetInnerHTML={{ __html: product.Description }} />

@@ -10,6 +10,13 @@ const isDisconnected = process.env.JSS_MODE === constants.JSS_MODE.DISCONNECTED;
 const publicUrl = getPublicUrl();
 
 const nextConfig = {
+  images: {
+    domains: [
+      'ocdevops.blob.core.windows.net',
+      'cm.hardcore.localhost'],
+  },
+  
+
   // Set assetPrefix to our public URL
   assetPrefix: publicUrl,
 
